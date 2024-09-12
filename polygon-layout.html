@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Image Grid</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr); /* 5 equal columns */
+            gap: 20px; /* Space between columns */
+           align-items: center;
+            height: 600px; /* Adjust to suit your design */
+        }
+
+        .image-grid div {
+            display: grid;
+            align-items: center; /* Center items vertically */
+            gap: 10px; /* 20px padding inside each grid item */
+        }
+
+        /* Define the number of rows each column will take */
+        .col-1 {
+            grid-template-rows: repeat(1, 1fr); /* One image */
+           align-items: center;
+        }
+
+        .col-2 {
+            grid-template-rows: repeat(2, 1fr); /* Two images */
+           align-items: center;
+        }
+
+        .col-3 {
+            grid-template-rows: repeat(3, 1fr); /* Three images */
+           align-items: center;
+        }
+
+        .col-4 {
+            grid-template-rows: repeat(2, 1fr); /* Two images, vertically centered */
+            align-items: center;
+        }
+
+        .col-5 {
+            grid-template-rows: repeat(1, 1fr); /* One image, vertically centered */
+            align-items: center;
+        }
+
+        .image-grid img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 10px; /* Optional: Add rounded corners */
+        }
+    </style>
+</head>
+<body>
+
+<div class="image-grid">
+    <!-- First Column (1 image) -->
+    <div class="col-1">
+        <img src="https://banner.caratlane.com/live-images/2930304da67c485bbbb1330b1b887514.jpg" alt="Image 1">
+    </div>
+    
+    <!-- Second Column (2 images) -->
+    <div class="col-2">
+        <img src="https://banner.caratlane.com/live-images/2930304da67c485bbbb1330b1b887514.jpg" alt="Image 2-1">
+        <img src="https://banner.caratlane.com/live-images/2930304da67c485bbbb1330b1b887514.jpg" alt="Image 2-2">
+    </div>
+    
+    <!-- Third Column (3 images) -->
+    <div class="col-3">
+        <img src="https://banner.caratlane.com/live-images/2930304da67c485bbbb1330b1b887514.jpg" alt="Image 3-1">
+        <img src="https://banner.caratlane.com/live-images/2930304da67c485bbbb1330b1b887514.jpg" alt="Image 3-2">
+        <img src="https://banner.caratlane.com/live-images/2930304da67c485bbbb1330b1b887514.jpg" alt="Image 3-3">
+    </div>
+    
+    <!-- Fourth Column (2 images, vertically centered) -->
+    <div class="col-4">
+        <img src="https://banner.caratlane.com/live-images/2930304da67c485bbbb1330b1b887514.jpg" alt="Image 4-1">
+        <img src="https://banner.caratlane.com/live-images/2930304da67c485bbbb1330b1b887514.jpg" alt="Image 4-2">
+    </div>
+    
+    <!-- Fifth Column (1 image, vertically centered) -->
+    <div class="col-5">
+        <img src="https://banner.caratlane.com/live-images/2930304da67c485bbbb1330b1b887514.jpg" alt="Image 5">
+    </div>
+</div>
+
+</body>
+</html>
